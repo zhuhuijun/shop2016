@@ -1,0 +1,28 @@
+{
+  "name": "netshop",
+  "description": "node netsjop",
+  "main": "index.js",
+  "authors": [
+    "zhuhj"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "shop"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "angular": "^1.5.0",
+    "angular-route": "^1.5.0"
+  }
+}

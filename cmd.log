@@ -1,0 +1,14 @@
+npm install -g bower
+ls
+bower install bootstrap
+rmdir /s/q netshop
+mkdir netshop
+cd netshop
+npm init
+touch .bowerrc
+ls
+bower init
+bower install bootstrap --save
+touch .gitignore
+bower install angular angular-route --save
+doskey /history >>cmd.log

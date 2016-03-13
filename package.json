@@ -1,0 +1,23 @@
+{
+  "name": "netshop",
+  "version": "1.0.0",
+  "description": "node netsjop",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhuhuijun/shop2016.git"
+  },
+  "keywords": [
+    "node",
+    "shop"
+  ],
+  "author": "zhuhj",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhuhuijun/shop2016/issues"
+  },
+  "homepage": "https://github.com/zhuhuijun/shop2016#readme"
+}
