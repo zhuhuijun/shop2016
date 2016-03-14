@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/zhuhuijun/shop2016/issues"
   },
-  "homepage": "https://github.com/zhuhuijun/shop2016#readme"
+  "homepage": "https://github.com/zhuhuijun/shop2016#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "serve-favicon": "^2.3.0"
+  }
 }
