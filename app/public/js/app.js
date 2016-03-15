@@ -9,6 +9,12 @@ app.config(function($routeProvider,$locationProvider){
     }).when('/home',{
         templateUrl:'pages/home.html',
         controller:'HomeCtrl'
+    }).when('/user/reg',{
+        templateUrl:'pages/user/reg.html',
+        controller:'RegCtrl'
+    }).when('/user/login',{
+        templateUrl:'pages/user/login.html',
+        controller:'LoginCtrl'
     }).otherwise({
         redirectTo:'/'
     })

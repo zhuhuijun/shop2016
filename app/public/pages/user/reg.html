@@ -1,0 +1,58 @@
+<div class="col-sm-12 col-md-12" ng-controller="RegCtrl">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Welcome
+        </div>
+        <form role="form" name="regform" class="form-horizontal" ng-submit="save()">
+            <div class="panel-body">
+                <div class="row form-group">
+                    <label for="username" class="control-label col-sm-offset-2 col-sm-2 text-left">用&nbsp;&nbsp;户:</label>
+
+                    <div class="input-group col-sm-4">
+                        <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-user"></span>
+                        </div>
+                        <input type="text" id="username" class="form-control" name="username" ng-model="user.username"/>
+                    </div>
+
+                </div>
+                <div class="row form-group">
+                    <label for="useremail" class="control-label col-sm-offset-2 col-sm-2 text-left">邮&nbsp;&nbsp;箱:</label>
+
+                    <div class="input-group col-sm-4">
+                        <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-user"></span>
+                        </div>
+                        <input type="text" id="useremail" class="form-control" name="useremail" ng-model="user.useremail"/>
+                    </div>
+
+                </div>
+                <div class="row form-group">
+                    <label for="userpwd" class="control-label col-sm-offset-2 col-sm-2 text-left">密&nbsp;&nbsp;码:</label>
+
+                    <div class="input-group col-sm-4">
+                        <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-lock"></span>
+                        </div>
+                        <input type="password" id="userpwd" class="form-control" name="userpwd"
+                               ng-model="user.userpwd"/>
+                    </div>
+
+                </div>
+                <div class="row form-group">
+                    <label for="userpwd2" class="control-label col-sm-offset-2 col-sm-2 text-left">重复密码:</label>
+
+                    <div class="input-group col-sm-4">
+                        <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-lock"></span>
+                        </div>
+                        <input type="password" id="userpwd2" class="form-control" name="userpwd2"
+                               ng-model="user.userpwd2"/>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
