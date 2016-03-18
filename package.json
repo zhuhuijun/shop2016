@@ -21,7 +21,10 @@
   },
   "homepage": "https://github.com/zhuhuijun/shop2016#readme",
   "dependencies": {
+    "body-parser": "^1.15.0",
+    "crypto": "0.0.3",
     "express": "^4.13.4",
+    "mongoose": "^4.4.7",
     "serve-favicon": "^2.3.0"
   }
 }

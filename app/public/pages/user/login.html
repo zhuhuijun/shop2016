@@ -3,7 +3,7 @@
         <div class="panel-heading">
             Welcome
         </div>
-        <form role="form" name="regform" id="regform" novalidate class="form-horizontal">
+        <form role="form" name="loginform" id="loginform" novalidate class="form-horizontal">
             <div class="panel-body">
                 <div class="row form-group">
                     <label for="username"
@@ -16,19 +16,6 @@
                         </div>
                         <input type="text" id="username" class="form-control" name="username" ng-model="user.username"
                                placeholder="中文" ng-required ng-pattern="/[\u4e00-\u9fa5]/"/>
-                    </div>
-
-                </div>
-                <div class="row form-group">
-                    <label for="useremail"
-                           class="control-label col-sm-offset-2 col-sm-2 text-left">邮&nbsp;&nbsp;箱:</label>
-
-                    <div class="input-group col-sm-4">
-                        <div class="input-group-addon">
-                            <span class="glyphicon glyphicon-user"></span>
-                        </div>
-                        <input type="email" id="useremail" ng-required class="form-control" name="useremail"
-                               ng-model="user.useremail" required minlength="5"/>
                     </div>
 
                 </div>
@@ -46,27 +33,13 @@
                     </div>
 
                 </div>
-                <div class="row form-group">
-                    <label for="userpwd2" class="control-label col-sm-offset-2 col-sm-2 text-left">重复密码:</label>
+            </div>
 
-                    <div class="input-group col-sm-4">
-                        <div class="input-group-addon">
-                            <span class="glyphicon glyphicon-lock"></span>
-                        </div>
-                        <input type="password" id="userpwd2" class="form-control" name="userpwd2"
-                               ng-model="user.userpwd2" required placeholder="6-12位密码" minlength="6"
-                               maxlength="12"/>
-                    </div>
-
+            <div class="panel-footer clearfix">
+                <div class="col-sm-offset-5 col-sm-1">
+                    <button type="submit" class="btn btn-primary btn-lg btn-enter" ng-click="save()">登录</button>
                 </div>
-                <div class="row from-group"></div>
             </div>
-
-        <div class="panel-footer clearfix">
-            <div class="col-sm-offset-5 col-sm-1">
-                <button type="submit" class="btn btn-primary btn-lg btn-enter" ng-click="save()">注册</button>
-            </div>
-        </div>
         </form>
     </div>
 
