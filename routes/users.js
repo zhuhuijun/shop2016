@@ -3,7 +3,7 @@
  */
 var express = require('express');
 var router = express.Router();
-var User=require('../models').User;
+var User = require('../models').User;
 var crypto = require('crypto');
 function encrypto(str) {
     return crypto.createHash('md5').update(str).digest('hex');
@@ -22,5 +22,19 @@ router.post('/reg', function (req, res) {
             res.json(result);
         }
     });
+});
+
+
+router.post('/login', function (req, res) {
+    var user = req.body;
+    user.userpwd = encrypto(user.userpwd);
+    User.findOne({username: user.username, userpwd: user.userpwd}, function (err, user) {
+        if (err) {
+            res.status(500).json({msg: err});
+        } else {
+            res.json(user);
+        }
+    });
+
 });
 module.exports = router;
