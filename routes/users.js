@@ -32,9 +32,34 @@ router.post('/login', function (req, res) {
         if (err) {
             res.status(500).json({msg: err});
         } else {
+            req.session.user=user;
             res.json(user);
         }
     });
+
+});
+
+
+/**
+ *
+ * 退出
+ */
+router.post('/logout', function (req, res) {
+    req.session.user = null;
+    res.status(200).json({'msg': 'success'});
+});
+
+
+/**
+ * 验证
+ */
+router.post('/validate', function (req, res) {
+    var user =req.session.user ;
+    if(user){
+        res.status(200).json(user);
+    }else{
+        res.status(401).json({msg:'no validate'});
+    }
 
 });
 module.exports = router;

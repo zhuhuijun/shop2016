@@ -30,9 +30,9 @@ app.controller('RegCtrl', function ($scope, $http, $location) {
     }
 });
 
-app.controller('LoginCtrl', function ($scope,$http,$locatin) {
+app.controller('LoginCtrl', function ($rootScope,$scope,$http,$location) {
     $scope.save = function () {
-        var v = $("#regform").validate({
+        var v = $("#loginform").validate({
             onsubmit: false,
             errorPlacement: function (error, element) {
                 error.appendTo(element.parent());
@@ -45,10 +45,24 @@ app.controller('LoginCtrl', function ($scope,$http,$locatin) {
                 method: 'POST',
                 data: $scope.user
             }).success(function (user) {
+                $rootScope.user=user;
                 $location.path('/home');
             }).error(function (data) {
                 $location.path('/users/login');
             })
         }
     }
+});
+
+app.controller("NavCtrl",function($scope,$location){
+    $scope.logout=function(){
+        $http({
+            url: '/users/logout',
+            method: 'POST'
+        }).success(function (data) {
+            $location.path('/users/login');
+        }).error(function (data) {
+            $location.path('/users/login');
+        })
+    };
 });

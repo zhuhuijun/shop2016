@@ -19,3 +19,14 @@ app.config(function($routeProvider,$locationProvider){
         redirectTo:'/'
     })
 });
+app.run(function($http,$location,$rootScope){
+    $http({
+        url: '/users/validate',
+        method: 'POST'
+    }).success(function (user) {
+        $rootScope.user=user;
+        $location.path('/home');
+    }).error(function (data) {
+        $location.path('/users/login');
+    })
+});

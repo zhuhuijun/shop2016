@@ -11,7 +11,7 @@
 <body>
 
 <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
+    <div class="container" ng-controller="NavCtrl">
         <div class="navbar-header">
             <a href="#/home" class="navbar-brand logo"><img src="img/logo.png" alt="瓢城企训网"></a>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
@@ -25,7 +25,7 @@
                 <li class="active"><a href="#/home"><span class="glyphicon glyphicon-home"></span> 首页</a></li>
                 <li><a href="#/user/reg"><span class="glyphicon glyphicon-list"></span>注册</a></li>
                 <li><a href="#/user/login"><span class="glyphicon glyphicon-fire"></span> 登录</a></li>
-                <li><a href="about.html"><span class="glyphicon glyphicon-question-sign"></span> 关于</a></li>
+                <li><a href="#" ng-click="logout()"><span class="glyphicon glyphicon-question-sign"></span> 退出</a></li>
             </ul>
         </div>
     </div>
